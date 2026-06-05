@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import data from "@/data/campaigns.json";
+import data from "@/features/campaigns/data/campaigns.json";
 
 type Campaign = (typeof data.campaigns)[number];
 type CampaignDetail =

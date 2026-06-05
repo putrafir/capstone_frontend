@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { Link2, Loader2, AlertCircle, RefreshCw } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import AnalysisResultCard from "@/components/fake-followers/AnalysisResultCard";
-import { analyzeAccount } from "@/services/fakeFollowersService";
-import type { FakeFollowersResult } from "@/types";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import AnalysisResultCard from "@/features/fake-followers/components/AnalysisResultCard";
+import { analyzeAccount } from "@/features/fake-followers/services/fakeFollowersService";
+import type { FakeFollowersResult } from "@/shared/types";
 
 const COIN_COST = 15;
 

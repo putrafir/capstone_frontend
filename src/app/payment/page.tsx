@@ -1,15 +1,15 @@
 "use client";
 import { useState, useMemo } from "react";
 import { Download } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import PaymentCard from "@/components/payment/PaymentCard";
-import SearchBar from "@/components/payment/SearchBar";
-import LoadingSkeleton from "@/components/payment/LoadingSkeleton";
-import ErrorState from "@/components/payment/ErrorState";
-import EmptyState from "@/components/payment/EmptyState";
-import { usePayments } from "@/hooks/usePayments";
-import type { Campaign } from "@/types";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import PaymentCard from "@/features/payment/components/PaymentCard";
+import SearchBar from "@/features/payment/components/SearchBar";
+import LoadingSkeleton from "@/features/payment/components/LoadingSkeleton";
+import ErrorState from "@/features/payment/components/ErrorState";
+import EmptyState from "@/features/payment/components/EmptyState";
+import { usePayments } from "@/features/payment/hooks/usePayments";
+import type { Campaign } from "@/shared/types";
 
 export default function PaymentPage() {
   const { data: campaigns, loading, error, refetch } = usePayments();

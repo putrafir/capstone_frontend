@@ -1,6 +1,6 @@
 
 import { NextResponse } from "next/server";
-import type { BriefingTemplate } from "@/types";
+import type { BriefingTemplate } from "@/shared/types";
 
 const templates: BriefingTemplate[] = [
   {

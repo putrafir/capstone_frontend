@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import data from "@/data/invoices.json";
+import data from "@/features/payment/data/invoices.json";
 
 function maybeError(): boolean {
   return Math.random() < 0.1;

@@ -2,18 +2,18 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import StatCard from "@/components/StatCard";
-import PerformanceChart from "@/components/dashboard/PerformanceChart";
-import SavedCreators from "@/components/dashboard/SavedCreators";
-import MessagesSection from "@/components/dashboard/MessagesSection";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import StatCard from "@/shared/components/common/StatCard";
+import PerformanceChart from "@/features/dashboard/components/PerformanceChart";
+import SavedCreators from "@/features/dashboard/components/SavedCreators";
+import MessagesSection from "@/features/dashboard/components/MessagesSection";
 import {
   fetchDashboardStats,
   fetchSavedCreators,
   fetchMessages,
-} from "@/services/dashboardService";
-import type { DashboardStats, Creator, Message } from "@/types";
+} from "@/features/dashboard/services/dashboardService";
+import type { DashboardStats, Creator, Message } from "@/shared/types";
 
 
 import {

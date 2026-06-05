@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import data from "@/data/paymentMethods.json";
+import data from "@/features/payment/data/paymentMethods.json";
 
 export async function GET(): Promise<NextResponse> {
   await new Promise((r) => setTimeout(r, 300));

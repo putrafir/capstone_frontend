@@ -3,11 +3,11 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import CreatorCard from "@/components/dashboard/CreatorCard";
-import { fetchSavedCreators } from "@/services/dashboardService";
-import type { Creator } from "@/types";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import CreatorCard from "@/features/dashboard/components/CreatorCard";
+import { fetchSavedCreators } from "@/features/dashboard/services/dashboardService";
+import type { Creator } from "@/shared/types";
 
 // Skeleton for one creator card
 function CreatorCardSkeleton() {

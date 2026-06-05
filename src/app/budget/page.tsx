@@ -2,28 +2,28 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import StepIndicator from "@/components/budget/StepIndicator";
-import Step1InputData from "@/components/budget/Step1InputData";
-import Step2Strategy from "@/components/budget/Step2Strategy";
-import Step3SmartMatching from "@/components/budget/Step3SmartMatching";
-import Step4Briefing from "@/components/budget/Step4Briefing";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import StepIndicator from "@/features/budget/components/StepIndicator";
+import Step1InputData from "@/features/budget/components/Step1InputData";
+import Step2Strategy from "@/features/budget/components/Step2Strategy";
+import Step3SmartMatching from "@/features/budget/components/Step3SmartMatching";
+import Step4Briefing from "@/features/budget/components/Step4Briefing";
 import {
   fetchStrategies,
   fetchInfluencers,
   fetchBriefingTemplates,
   createBriefingTemplate,
-} from "@/services/budgetService";
-import { createCampaignFromBudgetForm } from "@/services/managedCampaignService";
-import { notifyManagedCampaignsUpdated } from "@/hooks/useManagedCampaigns";
-import { useBudgetForm, validateStep1 } from "@/hooks/useBudgetForm";
+} from "@/features/budget/services/budgetService";
+import { createCampaignFromBudgetForm } from "@/features/campaigns/services/managedCampaignService";
+import { notifyManagedCampaignsUpdated } from "@/features/campaigns/hooks/useManagedCampaigns";
+import { useBudgetForm, validateStep1 } from "@/features/budget/hooks/useBudgetForm";
 import type {
   Strategy,
   Influencer,
   BriefingTemplate,
   CampaignFormErrors,
-} from "@/types";
+} from "@/shared/types";
 
 export default function BudgetPage() {
   const router = useRouter();

@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import PaymentMethodAccordion from "@/components/payment/PaymentMethodAccordion";
-import ErrorState from "@/components/payment/ErrorState";
-import { useInvoice } from "@/hooks/useInvoice";
-import { usePaymentMethods } from "@/hooks/usePaymentMethods";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import PaymentMethodAccordion from "@/features/payment/components/PaymentMethodAccordion";
+import ErrorState from "@/features/payment/components/ErrorState";
+import { useInvoice } from "@/features/payment/hooks/useInvoice";
+import { usePaymentMethods } from "@/features/payment/hooks/usePaymentMethods";
 import { ArrowLeft } from "lucide-react";
 
 function formatRupiah(n: number): string {

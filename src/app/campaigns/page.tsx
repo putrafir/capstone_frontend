@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Eye, Heart, Share2, Search, Plus } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import { fetchCampaigns } from "@/services/campaignService";
-import { useManagedCampaigns } from "@/hooks/useManagedCampaigns";
-import type { Campaign, CampaignStatus } from "@/types/campaign";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import { fetchCampaigns } from "@/features/campaigns/services/campaignService";
+import { useManagedCampaigns } from "@/features/campaigns/hooks/useManagedCampaigns";
+import type { Campaign, CampaignStatus } from "@/features/campaigns/types/campaign";
 
 // ── Status badge ────────────────────────────────────────────
 const STATUS_MAP: Record<CampaignStatus, { dot: string; label: string }> = {

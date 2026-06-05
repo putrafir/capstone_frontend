@@ -1,7 +1,7 @@
 
 
 import { NextResponse } from "next/server";
-import type { Influencer } from "@/types";
+import type { Influencer } from "@/shared/types";
 
 const influencers: Influencer[] = [
   {

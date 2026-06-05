@@ -15,12 +15,12 @@ import {
   RefreshCw,
   Loader2,
 } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import { fetchCreators } from "@/services/searchService";
-import type { Creator } from "@/types";
-import RateCardModal from "@/components/dashboard/RateCardModal";
-import ChatModal from "@/components/dashboard/ChatModal";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import { fetchCreators } from "@/features/search/services/searchService";
+import type { Creator } from "@/shared/types";
+import RateCardModal from "@/features/dashboard/components/RateCardModal";
+import ChatModal from "@/features/dashboard/components/ChatModal";
 
 
 
@@ -617,7 +617,7 @@ function SmartMatchingTab() {
     setSubmitted(false);
     try {
       // Simulasi Smart Matching: fetch creators biasa sebagai "hasil AI"
-      const { fetchCreators } = await import("@/services/searchService");
+      const { fetchCreators } = await import("@/features/search/services/searchService");
       const res = await fetchCreators({ limit: 6 });
       setResults(res.data);
       setSubmitted(true);

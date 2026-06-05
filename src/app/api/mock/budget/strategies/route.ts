@@ -1,7 +1,7 @@
 
 
 import { NextResponse } from "next/server";
-import type { Strategy } from "@/types";
+import type { Strategy } from "@/shared/types";
 
 const strategies: Strategy[] = [
   {

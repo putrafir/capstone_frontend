@@ -1,7 +1,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
-import data from "@/data/search.json";
-import type { Creator } from "@/types";
+import data from "@/features/search/data/search.json";
+import type { Creator } from "@/shared/types";
 
 export async function GET(req: NextRequest): Promise<NextResponse> {
   

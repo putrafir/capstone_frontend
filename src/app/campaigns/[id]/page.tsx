@@ -32,10 +32,10 @@ const Instagram = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import ChatModal from "@/components/dashboard/ChatModal";
-import { fetchCampaignDetail } from "@/services/campaignService";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import ChatModal from "@/features/dashboard/components/ChatModal";
+import { fetchCampaignDetail } from "@/features/campaigns/services/campaignService";
 import type {
   CampaignDetail,
   CampaignCreator,
@@ -43,7 +43,7 @@ import type {
   ContentItem,
   ContentStatus,
   CreatorStatus,
-} from "@/types/campaign";
+} from "@/features/campaigns/types/campaign";
 
 // ── Helpers ──────────────────────────────────────────────────
 type Tab = "creators" | "strategi" | "content" | "tracking";

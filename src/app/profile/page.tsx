@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import { useCurrentUser } from "@/hooks/useCurrentUser";
-import EditProfileModal from "@/components/dashboard/EditProfileModal";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import { useCurrentUser } from "@/features/profile/hooks/useCurrentUser";
+import EditProfileModal from "@/features/dashboard/components/EditProfileModal";
 import {
   User,
   Mail,

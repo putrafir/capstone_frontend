@@ -1,16 +1,16 @@
 "use client";
 import { useParams, useRouter } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import PaymentRow from "@/components/payment/PaymentRow";
-import CampaignTabs from "@/components/payment/CampaignTabs";
-import { CampaignCardSkeleton } from "@/components/payment/LoadingSkeleton";
-import ErrorState from "@/components/payment/ErrorState";
-import EmptyState from "@/components/payment/EmptyState";
-import { usePayments } from "@/hooks/usePayments";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import PaymentRow from "@/features/payment/components/PaymentRow";
+import CampaignTabs from "@/features/payment/components/CampaignTabs";
+import { CampaignCardSkeleton } from "@/features/payment/components/LoadingSkeleton";
+import ErrorState from "@/features/payment/components/ErrorState";
+import EmptyState from "@/features/payment/components/EmptyState";
+import { usePayments } from "@/features/payment/hooks/usePayments";
 import { useState, useMemo } from "react";
-import type { PaymentInfluencer } from "@/types";
+import type { PaymentInfluencer } from "@/shared/types";
 
 export default function CampaignInvoicePage() {
   const { campaignId } = useParams<{ campaignId: string }>();

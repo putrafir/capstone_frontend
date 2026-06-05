@@ -1,10 +1,10 @@
 "use client";
 
-import Sidebar from "@/components/Sidebar";
-import Topbar from "@/components/Topbar";
-import { useNotifications } from "@/hooks/useNotifications";
+import Sidebar from "@/shared/components/layout/Sidebar";
+import Topbar from "@/shared/components/layout/Topbar";
+import { useNotifications } from "@/features/notifications/hooks/useNotifications";
 import { useRouter } from "next/navigation";
-import type { Notification, NotificationType } from "@/types/notification";
+import type { Notification, NotificationType } from "@/features/notifications/types/notification";
 import {
   Bell,
   CheckCheck,
