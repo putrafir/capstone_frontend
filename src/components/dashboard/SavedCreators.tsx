@@ -1,7 +1,4 @@
-// ============================================================
-// FILE: src/components/SavedCreators.tsx
-// Dashboard widget — mini list. Klik "Lihat Semua" → /saved-creators
-// ============================================================
+
 
 import Link from "next/link";
 import type { Creator } from "@/types";

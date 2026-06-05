@@ -1,6 +1,4 @@
-// ============================================================
-// FILE: src/services/dashboardService.ts
-// ============================================================
+
 
 import axiosInstance from "@/lib/axios";
 import API_CONFIG from "@/config/api";

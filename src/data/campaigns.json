@@ -1,0 +1,67 @@
+{
+  "campaigns": [
+    { "id": "camp-001", "title": "Black Friday", "status": "Pending", "startDate": "2025-06-12", "creators": [{"id":1,"avatar":"https://i.pravatar.cc/40?img=11"},{"id":2,"avatar":"https://i.pravatar.cc/40?img=14"},{"id":3,"avatar":"https://i.pravatar.cc/40?img=16"}], "views": 199, "likes": 199, "shares": 199 },
+    { "id": "camp-002", "title": "Cyber Monday", "status": "Pending", "startDate": "2025-06-12", "creators": [{"id":4,"avatar":"https://i.pravatar.cc/40?img=21"},{"id":5,"avatar":"https://i.pravatar.cc/40?img=22"},{"id":6,"avatar":"https://i.pravatar.cc/40?img=23"}], "views": 210, "likes": 180, "shares": 120 },
+    { "id": "camp-003", "title": "Ramadan Promo", "status": "Berjalan", "startDate": "2025-06-12", "creators": [{"id":7,"avatar":"https://i.pravatar.cc/40?img=31"},{"id":8,"avatar":"https://i.pravatar.cc/40?img=32"},{"id":9,"avatar":"https://i.pravatar.cc/40?img=33"}], "views": 320, "likes": 290, "shares": 150 },
+    { "id": "camp-004", "title": "Summer Sale", "status": "Berjalan", "startDate": "2025-06-12", "creators": [{"id":10,"avatar":"https://i.pravatar.cc/40?img=34"},{"id":11,"avatar":"https://i.pravatar.cc/40?img=35"},{"id":12,"avatar":"https://i.pravatar.cc/40?img=36"}], "views": 410, "likes": 390, "shares": 210 },
+    { "id": "camp-005", "title": "New Year Blast", "status": "Berjalan", "startDate": "2025-06-12", "creators": [{"id":13,"avatar":"https://i.pravatar.cc/40?img=37"},{"id":14,"avatar":"https://i.pravatar.cc/40?img=38"},{"id":15,"avatar":"https://i.pravatar.cc/40?img=39"}], "views": 500, "likes": 470, "shares": 300 },
+    { "id": "camp-006", "title": "Tech Launch", "status": "Berjalan", "startDate": "2025-06-12", "creators": [{"id":16,"avatar":"https://i.pravatar.cc/40?img=40"},{"id":17,"avatar":"https://i.pravatar.cc/40?img=41"},{"id":18,"avatar":"https://i.pravatar.cc/40?img=42"}], "views": 600, "likes": 550, "shares": 400 },
+    { "id": "camp-007", "title": "Gaming Fest", "status": "Berjalan", "startDate": "2025-06-12", "creators": [{"id":19,"avatar":"https://i.pravatar.cc/40?img=43"},{"id":20,"avatar":"https://i.pravatar.cc/40?img=44"},{"id":21,"avatar":"https://i.pravatar.cc/40?img=45"}], "views": 700, "likes": 650, "shares": 500 },
+    { "id": "camp-008", "title": "End Year Sale", "status": "Selesai", "startDate": "2025-06-12", "creators": [{"id":22,"avatar":"https://i.pravatar.cc/40?img=46"},{"id":23,"avatar":"https://i.pravatar.cc/40?img=47"},{"id":24,"avatar":"https://i.pravatar.cc/40?img=48"}], "views": 800, "likes": 700, "shares": 600 }
+  ],
+
+  "campaignDetails": {
+    "camp-001": {
+      "id": "camp-001",
+      "title": "Back Friday Campaign",
+      "startDate": "2025-06-12",
+      "endDate": "2026-06-12",
+      "creators": [
+        { "id": 1, "name": "Jess No Limit", "handle": "@jessnolimit", "platform": "ig", "location": "Jakarta", "followers": "5JT", "status": "Negosiasi", "hasUnread": true, "avatar": "https://i.pravatar.cc/60?img=21" },
+        { "id": 2, "name": "MiawAug", "handle": "@miawaug", "platform": "yt", "location": "Bandung", "followers": "3JT", "status": "Butuh direview", "hasUnread": false, "avatar": "https://i.pravatar.cc/60?img=22" },
+        { "id": 3, "name": "Windah Basudara", "handle": "@windahbasudara", "platform": "yt", "location": "Jakarta", "followers": "4JT", "status": "Posting", "hasUnread": false, "avatar": "https://i.pravatar.cc/60?img=23" },
+        { "id": 4, "name": "Ria Ricis", "handle": "@riaricis", "platform": "ig", "location": "Jakarta", "followers": "30JT", "status": "Negosiasi", "hasUnread": true, "avatar": "https://i.pravatar.cc/60?img=24" },
+        { "id": 5, "name": "Atta Halilintar", "handle": "@attahalilintar", "platform": "yt", "location": "Jakarta", "followers": "29JT", "status": "Negosiasi", "hasUnread": false, "avatar": "https://i.pravatar.cc/60?img=25" }
+      ],
+
+      "contentGroups": [
+        {
+          "creator": { "id": 1, "name": "Jess No Limit", "handle": "@jessnolimit", "location": "Jakarta", "category": "Gaming", "followers": "5JT", "engagement": "5.2%", "avgViews": "40K", "avatar": "https://i.pravatar.cc/60?img=21", "verified": true },
+          "items": [
+            { "id": 1, "creatorId": 1, "thumbnailUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80", "status": "Revisi", "date": "2025-12-16", "caption": "Gameplay MLBB terbaru, meta sekarang makin seru!" },
+            { "id": 2, "creatorId": 1, "thumbnailUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80", "status": "Perlu direview", "date": "2025-12-16", "caption": "Rank push bareng viewers!" }
+          ]
+        }
+      ],
+
+      "tracking": {
+        "stats": {
+          "creatorsPosted": 4,
+          "creatorsTotal": 10,
+          "contentToday": 0,
+          "totalContent": 10,
+          "eventModeContent": "6.6k",
+          "totalEngagement": "11.6M",
+          "avgER": "0.88%",
+          "estImpressions": "64.9M",
+          "estReach": "43.2M",
+          "totalLikes": "11.4M",
+          "totalComments": "176k",
+          "views": "1.5B"
+        },
+        "postedContent": [
+          { "id": 1, "creatorName": "Jess No Limit", "creatorHandle": "@jessnolimit", "creatorAvatar": "https://i.pravatar.cc/60?img=21", "verified": true, "thumbnailUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=80", "timeAgo": "2d", "views": "4.5M", "likes": "240K", "comments": "4,590" },
+          { "id": 2, "creatorName": "MiawAug", "creatorHandle": "@miawaug", "creatorAvatar": "https://i.pravatar.cc/60?img=22", "verified": true, "thumbnailUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=80", "timeAgo": "2d", "views": "3.2M", "likes": "180K", "comments": "2,100" },
+          { "id": 3, "creatorName": "Windah Basudara", "creatorHandle": "@windahbasudara", "creatorAvatar": "https://i.pravatar.cc/60?img=23", "verified": true, "thumbnailUrl": "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&q=80", "timeAgo": "2d", "views": "5.1M", "likes": "300K", "comments": "6,200" }
+        ]
+      }
+    }
+  },
+
+  "messages": {
+    "creator-1": [
+      { "id": 1, "role": "brand", "text": "Halo, kami tertarik kolaborasi dengan creator gaming.", "time": "12:15 pm", "date": "August 21" },
+      { "id": 2, "role": "creator", "text": "Silakan jelaskan detail campaignnya.", "time": "10:15 pm", "date": "August 21" }
+    ]
+  }
+}

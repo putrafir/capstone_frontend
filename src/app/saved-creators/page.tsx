@@ -1,16 +1,11 @@
 "use client";
-// ============================================================
-// FILE: src/app/saved-creators/page.tsx
-// Halaman "Kreator yang Disimpan" — pixel-perfect sesuai Figma
-// Axios + try/catch + loading skeleton + error UI
-// ============================================================
 
 import { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { useRouter } from "next/navigation";
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
-import CreatorCard from "@/components/CreatorCard";
+import CreatorCard from "@/components/dashboard/CreatorCard";
 import { fetchSavedCreators } from "@/services/dashboardService";
 import type { Creator } from "@/types";
 

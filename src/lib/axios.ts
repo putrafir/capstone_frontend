@@ -1,6 +1,4 @@
-// ============================================================
-// FILE: src/lib/axios.ts
-// ============================================================
+
 
 import axios, { AxiosInstance, InternalAxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
 import API_CONFIG from "@/config/api";

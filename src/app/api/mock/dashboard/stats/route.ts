@@ -1,6 +1,4 @@
-// ============================================================
-// FILE: src/app/api/mock/dashboard/stats/route.ts
-// ============================================================
+
 import { NextResponse } from "next/server";
 import data from "@/data/dashboard.json";
 

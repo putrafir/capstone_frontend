@@ -1,15 +1,13 @@
 "use client";
-// ============================================================
-// FILE: src/app/dashboard/page.tsx
-// ============================================================
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Sidebar from "@/components/Sidebar";
 import Topbar from "@/components/Topbar";
 import StatCard from "@/components/StatCard";
-import PerformanceChart from "@/components/PerformanceChart";
-import SavedCreators from "@/components/SavedCreators";
-import MessagesSection from "@/components/MessagesSection";
+import PerformanceChart from "@/components/dashboard/PerformanceChart";
+import SavedCreators from "@/components/dashboard/SavedCreators";
+import MessagesSection from "@/components/dashboard/MessagesSection";
 import {
   fetchDashboardStats,
   fetchSavedCreators,
@@ -17,31 +15,54 @@ import {
 } from "@/services/dashboardService";
 import type { DashboardStats, Creator, Message } from "@/types";
 
+
+import {
+  Megaphone,
+  Users,
+  BarChart3,
+  CircleDollarSign,
+  TrendingUp,
+  AlertTriangle,
+} from "lucide-react";
+
 interface StatMeta {
   key: keyof DashboardStats;
   label: string;
-  icon: string;
+  icon: "Megaphone" | "Users" | "BarChart3" | "CircleDollarSign" | "TrendingUp";
 }
 
 const STAT_META: StatMeta[] = [
-  { key: "totalCampaigns",  label: "Total Campaigns",  icon: "📢" },
-  { key: "totalReach",      label: "Total Reach",      icon: "👥" },
-  { key: "engagementRate",  label: "Engagement Rate",  icon: "📊" },
-  { key: "budgetUsed",      label: "Budget Used",      icon: "💰" },
-  { key: "roi",             label: "ROI",              icon: "📈" },
+  { key: "totalCampaigns", label: "Total Campaigns",  icon: "Megaphone"         },
+  { key: "totalReach",     label: "Total Reach",      icon: "Users"             },
+  { key: "engagementRate", label: "Engagement Rate",  icon: "BarChart3"         },
+  { key: "budgetUsed",     label: "Budget Used",      icon: "CircleDollarSign"  },
+  { key: "roi",            label: "ROI",              icon: "TrendingUp"        },
 ];
+
+const IconMapper = {
+  Megaphone:        <Megaphone        className="w-5 h-5 stroke-[1.5]" />,
+  Users:            <Users            className="w-5 h-5 stroke-[1.5]" />,
+  BarChart3:        <BarChart3        className="w-5 h-5 stroke-[1.5]" />,
+  CircleDollarSign: <CircleDollarSign className="w-5 h-5 stroke-[1.5]" />,
+  TrendingUp:       <TrendingUp       className="w-5 h-5 stroke-[1.5]" />,
+};
 
 function StatsSkeleton() {
   return (
     <>
       {STAT_META.map((_, i) => (
-        <div key={i} className="flex-1 min-w-[140px] h-24 bg-blue-400/50 rounded-2xl animate-pulse" />
+        <div
+          key={i}
+          className="flex-1 min-w-[140px] h-24 bg-blue-100 rounded-2xl animate-pulse"
+        />
       ))}
     </>
   );
 }
 
 export default function DashboardPage() {
+  const router = useRouter();
+
   const [stats,    setStats]    = useState<DashboardStats | null>(null);
   const [creators, setCreators] = useState<Creator[]>([]);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -61,7 +82,9 @@ export default function DashboardPage() {
       const data = await fetchDashboardStats();
       setStats(data);
     } catch (err: unknown) {
-      setStatsError(err instanceof Error ? err.message : "Gagal memuat statistik");
+      setStatsError(
+        err instanceof Error ? err.message : "Gagal memuat statistik"
+      );
     } finally {
       setStatsLoading(false);
     }
@@ -74,7 +97,9 @@ export default function DashboardPage() {
       const data = await fetchSavedCreators();
       setCreators(data);
     } catch (err: unknown) {
-      setCreatorsError(err instanceof Error ? err.message : "Gagal memuat kreator");
+      setCreatorsError(
+        err instanceof Error ? err.message : "Gagal memuat kreator"
+      );
     } finally {
       setCreatorsLoading(false);
     }
@@ -87,7 +112,9 @@ export default function DashboardPage() {
       const data = await fetchMessages();
       setMessages(data);
     } catch (err: unknown) {
-      setMessagesError(err instanceof Error ? err.message : "Gagal memuat pesan");
+      setMessagesError(
+        err instanceof Error ? err.message : "Gagal memuat pesan"
+      );
     } finally {
       setMessagesLoading(false);
     }
@@ -116,10 +143,18 @@ export default function DashboardPage() {
               Track your campaigns, discover creators, and grow ROI today.
             </p>
             <div className="flex gap-3 mt-4">
-              <button className="px-5 py-2 rounded-lg border border-blue-600 text-blue-600 text-sm font-medium hover:bg-blue-50 transition-colors">
+              
+              <button
+                onClick={() => router.push("/search")}
+                className="px-5 py-2 rounded-lg border border-blue-600 text-blue-600 text-sm font-medium hover:bg-blue-50 transition-colors"
+              >
                 Find Influencer
               </button>
-              <button className="px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors">
+              
+              <button
+                onClick={() => router.push("/budget")}
+                className="px-5 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+              >
                 New Campaign
               </button>
             </div>
@@ -131,22 +166,30 @@ export default function DashboardPage() {
               <StatsSkeleton />
             ) : statsError ? (
               <div className="w-full p-4 bg-red-50 border border-red-200 rounded-2xl text-red-600 text-sm flex items-center gap-3">
-                <span>⚠️ {statsError}</span>
+                <AlertTriangle className="w-5 h-5 text-red-500 shrink-0" />
+                <span>{statsError}</span>
                 <button
                   onClick={loadStats}
-                  className="ml-auto px-3 py-1.5 bg-red-600 text-white rounded-lg text-xs hover:bg-red-700"
+                  className="ml-auto px-3 py-1.5 bg-red-600 text-white rounded-lg text-xs hover:bg-red-700 transition-colors"
                 >
                   Coba Lagi
                 </button>
               </div>
             ) : stats ? (
               STAT_META.map(({ key, label, icon }) => (
-                <StatCard key={key} icon={icon} label={label} value={stats[key]} />
+                <StatCard
+                  key={key}
+                  icon={IconMapper[icon]}
+                  label={label}
+                  value={stats[key]}
+                />
               ))
             ) : null}
           </div>
 
-          <h2 className="text-base font-bold text-gray-900">Your Performance Analytics</h2>
+          <h2 className="text-base font-bold text-gray-900">
+            Your Performance Analytics
+          </h2>
 
           {/* Chart + Saved Creators */}
           <div className="flex flex-col lg:flex-row gap-5">

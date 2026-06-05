@@ -1,0 +1,130 @@
+{
+  "invoices": [
+    {
+      "id": "Yoga2026-WindahBasudara-4c14-b6bc",
+      "campaignId": 1,
+      "campaignTitle": "Yoga 2026",
+      "influencerId": 1,
+      "influencerName": "Windah Basudara",
+      "influencerHandle": "Yoga 2026",
+      "influencerAvatar": "https://i.pravatar.cc/80?img=14",
+      "paymentMethod": "Hybrid",
+      "totalAmount": 600000,
+      "paidAmount": 0,
+      "remainingAmount": 600000,
+      "nextDueAmount": 300000,
+      "status": "pending",
+      "dueDate": "2026-02-15T23:59:00.000Z",
+      "breakdown": [
+        {
+          "label": "Rate Video",
+          "amount": 50000000,
+          "children": [
+            { "label": "1 Tiktok Video", "amount": 25000000 },
+            { "label": "1 Instagram Video", "amount": 25000000 }
+          ]
+        },
+        {
+          "label": "Rate Story",
+          "amount": 50000000,
+          "children": [
+            { "label": "1 Tiktok Video", "amount": 25000000 },
+            { "label": "1 Instagram Video", "amount": 25000000 }
+          ]
+        },
+        {
+          "label": "Add Ons",
+          "amount": 130000000,
+          "children": [
+            { "label": "Ads Boosting", "amount": 50000000 },
+            { "label": "Production/ Shipping", "amount": 25000000 },
+            { "label": "Boost Code Ads", "amount": 5000000 },
+            { "label": "Owning Content", "amount": 50000000 }
+          ]
+        }
+      ],
+      "adminFee": 2500
+    },
+    {
+      "id": "SkincareX-TasyaFarasya-5d67-e8ab",
+      "campaignId": 2,
+      "campaignTitle": "Skincare X - Glow Serum",
+      "influencerId": 4,
+      "influencerName": "Tasya Farasya",
+      "influencerHandle": "@tasyafarasya",
+      "influencerAvatar": "https://i.pravatar.cc/80?img=32",
+      "paymentMethod": "Bank Transfer",
+      "totalAmount": 22000000,
+      "paidAmount": 22000000,
+      "remainingAmount": 0,
+      "nextDueAmount": 0,
+      "status": "paid",
+      "dueDate": "2025-12-01T23:59:00.000Z",
+      "breakdown": [
+        {
+          "label": "Rate Video",
+          "amount": 20000000,
+          "children": [
+            { "label": "1 Tiktok Video", "amount": 10000000 },
+            { "label": "1 Instagram Video", "amount": 10000000 }
+          ]
+        },
+        {
+          "label": "Add Ons",
+          "amount": 2000000,
+          "children": [
+            { "label": "Ads Boosting", "amount": 1000000 },
+            { "label": "Production/ Shipping", "amount": 500000 },
+            { "label": "Owning Content", "amount": 500000 }
+          ]
+        }
+      ],
+      "adminFee": 2500
+    },
+    {
+      "id": "Yoga2026-WindahBasudara-4c14-b6bc",
+      "campaignId": 1,
+      "campaignTitle": "Yoga 2026",
+      "influencerId": 1,
+      "influencerName": "Windah Basudara",
+      "influencerHandle": "Yoga 2026",
+      "influencerAvatar": "https://i.pravatar.cc/80?img=14",
+      "paymentMethod": "Hybrid",
+      "totalAmount": 600000,
+      "paidAmount": 0,
+      "remainingAmount": 600000,
+      "nextDueAmount": 300000,
+      "status": "pending",
+      "dueDate": "2026-02-15T23:59:00.000Z",
+      "breakdown": [
+        {
+          "label": "Rate Video",
+          "amount": 50000000,
+          "children": [
+            { "label": "1 Tiktok Video", "amount": 25000000 },
+            { "label": "1 Instagram Video", "amount": 25000000 }
+          ]
+        },
+        {
+          "label": "Rate Story",
+          "amount": 50000000,
+          "children": [
+            { "label": "1 Tiktok Video", "amount": 25000000 },
+            { "label": "1 Instagram Video", "amount": 25000000 }
+          ]
+        },
+        {
+          "label": "Add Ons",
+          "amount": 130000000,
+          "children": [
+            { "label": "Ads Boosting", "amount": 50000000 },
+            { "label": "Production/ Shipping", "amount": 25000000 },
+            { "label": "Boost Code Ads", "amount": 5000000 },
+            { "label": "Owning Content", "amount": 50000000 }
+          ]
+        }
+      ],
+      "adminFee": 2500
+    }
+  ]
+}

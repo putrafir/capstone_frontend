@@ -1,0 +1,80 @@
+{
+  "campaigns": [
+    {
+      "id": 1,
+      "title": "Black Friday",
+      "totalAmount": 150000000,
+      "paidAmount": 10000000,
+      "remainingAmount": 100000000,
+      "totalInfluencers": 8,
+      "paidInfluencers": 1,
+      "influencers": [
+        {
+          "id": 1,
+          "name": "Windah Basudara",
+          "handle": "@windahbasudara",
+          "avatar": "https://i.pravatar.cc/80?img=14",
+          "method": "Hybrid",
+          "amount": 5000000,
+          "status": "pending"
+        },
+        {
+          "id": 2,
+          "name": "Jess No Limit",
+          "handle": "@jessnolimit",
+          "avatar": "https://i.pravatar.cc/80?img=21",
+          "method": "Bank Transfer",
+          "amount": 2500000,
+          "status": "pending"
+        },
+        {
+          "id": 3,
+          "name": "MiawAug",
+          "handle": "@miawaug",
+          "avatar": "https://i.pravatar.cc/80?img=22",
+          "method": "Hybrid",
+          "amount": 10000000,
+          "status": "paid"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Skincare X - Glow Serum",
+      "totalAmount": 150000000,
+      "paidAmount": 138000000,
+      "remainingAmount": 5000000,
+      "totalInfluencers": 8,
+      "paidInfluencers": 6,
+      "influencers": [
+        {
+          "id": 4,
+          "name": "Tasya Farasya",
+          "handle": "@tasyafarasya",
+          "avatar": "https://i.pravatar.cc/80?img=32",
+          "method": "Bank Transfer",
+          "amount": 22000000,
+          "status": "paid"
+        },
+        {
+          "id": 5,
+          "name": "Ria Ricis",
+          "handle": "@riaricis",
+          "avatar": "https://i.pravatar.cc/80?img=16",
+          "method": "Hybrid",
+          "amount": 18000000,
+          "status": "paid"
+        },
+        {
+          "id": 6,
+          "name": "Abel Cantika",
+          "handle": "@abellyc",
+          "avatar": "https://i.pravatar.cc/80?img=28",
+          "method": "Bank Transfer",
+          "amount": 15000000,
+          "status": "pending"
+        }
+      ]
+    }
+  ]
+}

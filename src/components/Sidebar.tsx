@@ -1,11 +1,9 @@
 "use client";
-// ============================================================
-// FILE: src/components/Sidebar.tsx
-// ============================================================
+
 
 import { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import {
   LayoutDashboard,
   Search,
@@ -15,6 +13,8 @@ import {
   DollarSign,
   ChevronLeft,
   ChevronRight,
+  LogOut,
+  User,
   LucideIcon,
 } from "lucide-react";
 
@@ -25,61 +25,67 @@ interface NavItem {
 }
 
 const NAV_ITEMS: NavItem[] = [
-  { icon: LayoutDashboard, label: "Dashboard",           href: "/dashboard" },
-  { icon: Search,          label: "Search",              href: "/search" },
-  { icon: TrendingUp,      label: "Budget Optimization", href: "/budget" },
-  { icon: Users,           label: "Fake Followers",      href: "/fake-followers" },
-  { icon: Megaphone,       label: "Manage Campaign",     href: "/campaigns" },
-  { icon: DollarSign,      label: "Payment",             href: "/payment" },
+  { icon: LayoutDashboard, label: "Dashboard", href: "/dashboard" },
+  { icon: Search, label: "Search", href: "/search" },
+  { icon: Megaphone, label: "Manage Campaign", href: "/campaigns" },
+  { icon: DollarSign, label: "Payment", href: "/payment" },
 ];
 
 export default function Sidebar() {
   const [collapsed, setCollapsed] = useState<boolean>(false);
   const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogout = () => {
+    
+    const authKeys = ["token", "user", "auth", "session", "fluensy_user", "fluensy_token"];
+    authKeys.forEach((key) => {
+      try { localStorage.removeItem(key); } catch {  }
+    });
+
+    // 2. Hapus seluruh localStorage jika diperlukan (opsional – uncomment untuk clear all)
+    // try { localStorage.clear(); } catch { /* ignore */ }
+
+    
+    try { sessionStorage.clear(); } catch { }
+
+    
+    document.cookie.split(";").forEach((c) => {
+      const key = c.trim().split("=")[0];
+      if (key) {
+        document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+      }
+    });
+
+    // 5. Redirect ke halaman login
+    router.push("/login");
+  };
 
   return (
     <aside
-      className={`relative flex flex-col bg-sky-950 transition-all duration-300 ease-in-out shrink-0 sticky top-0 h-screen ${
-        collapsed ? "w-20" : "w-64"
-      }`}
+      className={`relative flex flex-col bg-sky-950 transition-all duration-300 ease-in-out shrink-0 sticky top-0 h-screen ${collapsed ? "w-20" : "w-64"
+        }`}
     >
       {/* Logo */}
-      {/* <div className="flex items-center gap-3 px-4 py-6">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-400 via-purple-400 to-pink-400 flex items-center justify-center shrink-0">
-          <span className="text-white font-bold text-sm">F</span>
+      <div className="flex items-center gap-3 px-4 py-6">
+        <div className="w-10 h-10 shrink-0 flex items-center justify-center">
+          <img
+            src="/logo.svg"
+            alt="Fluensy Icon"
+            className="w-full h-full object-contain"
+          />
         </div>
+
         {!collapsed && (
-          <span className="text-white text-2xl font-bold tracking-tight whitespace-nowrap">
-            Fluensy
-          </span>
+          <div className="h-6 shrink-0 flex items-center">
+            <img
+              src="/text-logo.svg"
+              alt="Fluensy Text"
+              className="h-full w-auto object-contain"
+            />
+          </div>
         )}
-      </div> */}
-
-{/* Logo */}
-<div className="flex items-center gap-3 px-4 py-6">
-  {/* 1. Ikon Logo Puzzle */}
-  <div className="w-10 h-10 shrink-0 flex items-center justify-center">
-    <img 
-      src="/logo.svg" 
-      alt="Fluensy Icon" 
-      className="w-full h-full object-contain"
-    />
-  </div>
-  
-  {/* 2. Gambar Teks Logo (Hanya muncul jika tidak collapsed) */}
-  {!collapsed && (
-    <div className="h-6 shrink-0 flex items-center">
-      <img 
-        src="/text-logo.svg" // Memanggil file gambar teks Anda
-        alt="Fluensy Text" 
-        className="h-full w-auto object-contain"
-      />
-    </div>
-  )}
-</div>
-
-
-
+      </div>
 
       {/* Collapse Toggle */}
       <button
@@ -94,7 +100,7 @@ export default function Sidebar() {
         )}
       </button>
 
-      {/* Navigation */}
+      {/* Navigation — flex-1 agar mendorong logout ke bawah */}
       <nav className="flex flex-col gap-1 px-3 mt-2 flex-1 overflow-y-auto custom-scrollbar">
         {NAV_ITEMS.map(({ icon: Icon, label, href }) => {
           const isActive = pathname === href || pathname.startsWith(href + "/");
@@ -102,9 +108,8 @@ export default function Sidebar() {
             <Link
               key={label}
               href={href}
-              className={`flex items-center gap-3.5 px-3.5 py-2.5 rounded-2xl transition-all duration-200 ${
-                isActive ? "bg-white/20" : "hover:bg-white/10"
-              }`}
+              className={`flex items-center gap-3.5 px-3.5 py-2.5 rounded-2xl transition-all duration-200 ${isActive ? "bg-white/20" : "hover:bg-white/10"
+                }`}
               title={collapsed ? label : undefined}
             >
               <Icon
@@ -113,9 +118,8 @@ export default function Sidebar() {
               />
               {!collapsed && (
                 <span
-                  className={`text-white text-lg whitespace-nowrap ${
-                    isActive ? "font-semibold" : "font-normal"
-                  }`}
+                  className={`text-white text-lg whitespace-nowrap ${isActive ? "font-semibold" : "font-normal"
+                    }`}
                 >
                   {label}
                 </span>
@@ -124,6 +128,59 @@ export default function Sidebar() {
           );
         })}
       </nav>
+
+      {/* Divider */}
+      <div className="mx-3 border-t border-white/20" />
+
+      {/* Profile */}
+      <div className="px-3 pt-4">
+        <Link
+          href="/profile"
+          title={collapsed ? "Profile" : undefined}
+          className={`flex items-center gap-3.5 px-3.5 py-2.5 rounded-2xl transition-all duration-200 ${pathname === "/profile"
+            ? "bg-white/20"
+            : "hover:bg-white/10"
+            }`}
+        >
+          <User
+            className="w-5 h-5 text-white shrink-0"
+            strokeWidth={pathname === "/profile" ? 2.5 : 1.8}
+          />
+
+          {!collapsed && (
+            <span
+              className={`text-white text-lg whitespace-nowrap ${pathname === "/profile"
+                ? "font-semibold"
+                : "font-normal"
+                }`}
+            >
+              Profile
+            </span>
+          )}
+        </Link>
+      </div>
+
+      {/* Divider */}
+      <div className="mx-3 border-t border-white/20" />
+
+      {/* Logout — selalu di paling bawah */}
+      <div className="px-3 py-4">
+        <button
+          onClick={handleLogout}
+          title={collapsed ? "Logout" : undefined}
+          className="flex items-center gap-3.5 px-3.5 py-2.5 rounded-2xl w-full text-left transition-all duration-200 hover:bg-red-500/20 group"
+        >
+          <LogOut
+            className="w-5 h-5 text-red-300 group-hover:text-red-200 shrink-0"
+            strokeWidth={1.8}
+          />
+          {!collapsed && (
+            <span className="text-red-300 group-hover:text-red-200 text-lg whitespace-nowrap font-normal">
+              Logout
+            </span>
+          )}
+        </button>
+      </div>
     </aside>
   );
 }
