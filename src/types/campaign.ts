@@ -1,6 +1,4 @@
-// ============================================================
-// FILE: src/types/campaign.ts
-// ============================================================
+
 
 export type CampaignStatus = "Pending" | "Berjalan" | "Selesai";
 export type CreatorStatus  = "Negosiasi" | "Butuh direview" | "Posting" | "Selesai";
