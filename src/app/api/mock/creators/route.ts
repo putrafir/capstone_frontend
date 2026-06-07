@@ -16,7 +16,11 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   const page       = parseInt(searchParams.get("page") ?? "1", 10);
   const limit      = parseInt(searchParams.get("limit") ?? "6", 10);
 
-  let results: Creator[] = data.creators;
+  // Cast the imported JSON data to the expected Creator[] type. The JSON structure matches the
+  // Creator interface, but TypeScript cannot infer the literal string types for the `type`
+  // property inside `recentContent`. Using a type assertion resolves the mismatch without
+  // altering runtime behavior.
+  let results: Creator[] = (data.creators as unknown) as Creator[];
 
   // --- Filter: keyword ---
   if (q) {

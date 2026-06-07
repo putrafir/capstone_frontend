@@ -2,9 +2,7 @@ import axiosInstance from "@/shared/lib/axios";
 import API_CONFIG from "@/shared/config/api";
 import type { FakeFollowersResult } from "@/shared/types";
 
-
- @param profileUrl 
- 
+ // Function to analyze a social media profile URL.
 export async function analyzeAccount(
   profileUrl: string
 ): Promise<FakeFollowersResult> {

@@ -291,14 +291,16 @@ export default function PerformanceChart() {
             axisLine={false}
             tickLine={false}
           />
-          <YAxis
-            tickFormatter={(v: number) => `${v}${activeMetric.unit}`}
+            <YAxis
+              // The formatter may receive undefined during initial render; handle it safely.
+              tickFormatter={(v: number | undefined) => `${v ?? ''}${activeMetric.unit}`}
             tick={{ fontSize: 11, fill: "#6B7280" }}
             axisLine={false}
             tickLine={false}
           />
-          <Tooltip
-            formatter={(v: number) => [`${v}${activeMetric.unit}`, activeMetric.label]}
+            <Tooltip
+              // Tooltip formatter receives a value of unknown type; convert it safely to string.
+              formatter={(v: unknown) => [`${String(v ?? '')}${activeMetric.unit}`, activeMetric.label]}
             contentStyle={{ fontSize: 12, borderRadius: 8 }}
           />
           <Area

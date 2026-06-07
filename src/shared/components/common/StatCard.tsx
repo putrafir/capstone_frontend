@@ -1,7 +1,11 @@
 
 
+// The icon prop should accept a JSX element (ReactNode) rather than a plain string.
+// This allows passing rendered icons from IconMapper without type errors.
+import type { ReactNode } from "react";
+
 interface StatCardProps {
-  icon: string;
+  icon: ReactNode;
   label: string;
   value: string;
 }

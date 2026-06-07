@@ -79,17 +79,20 @@ const CONTENT_STATUS_MAP: Record<
   Disetujui: { bg: "bg-green-500", text: "text-white" },
 };
 
-function fmtRange() {
+// Formats a start and end date range. Previously this function ignored its parameters and always
+// returned "Today" as the end date, which caused a type error when called with two arguments.
+// The implementation now accepts the ISO date strings, formats each using the same options, and
+// returns a readable range.
+function fmtRange(start: string, end: string) {
   const opts: Intl.DateTimeFormatOptions = {
     month: "long",
     day: "numeric",
     year: "numeric",
   };
 
-  return `${new Date().toLocaleDateString(
-    "en-US",
-    opts
-  )} - Today`;
+  const startStr = new Date(start).toLocaleDateString("en-US", opts);
+  const endStr = new Date(end).toLocaleDateString("en-US", opts);
+  return `${startStr} - ${endStr}`;
 }
 
 // ── Skeleton ─────────────────────────────────────────────────

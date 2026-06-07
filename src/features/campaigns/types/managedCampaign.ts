@@ -20,7 +20,8 @@ export interface ManagedCampaign {
   briefing: string;
   status: CampaignStatus;
   createdAt: string; 
-  startDate: string;  — dipakai untuk tampil di list
+  // startDate is used for display in the list
+  startDate: string;
   endDate: string;   
 
 
