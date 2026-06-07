@@ -1,36 +1,259 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Smart Influencer Marketing Platform
 
-## Getting Started
+> Platform manajemen influencer marketing berbasis data yang membantu UMKM dan brand menemukan influencer yang tepat, mengoptimalkan budget kampanye, mendeteksi fake followers, serta memantau performa kampanye secara terpusat.
 
-First, run the development server:
+---
+
+# 📌 Latar Belakang
+
+Banyak pelaku UMKM dan bisnis digital mengalami kesulitan dalam menentukan influencer yang sesuai dengan target audiens dan budget yang dimiliki. Selain itu, risiko bekerja sama dengan akun yang memiliki fake followers dapat menyebabkan pemborosan biaya pemasaran.
+
+Project ini hadir sebagai solusi untuk membantu proses pengambilan keputusan secara lebih efektif melalui analisis data, budget optimization, dan influencer evaluation dalam satu platform terintegrasi.
+
+---
+
+# ✨ Fitur Utama
+
+### 📊 Dashboard Analytics
+
+- Ringkasan performa kampanye
+- Statistik influencer
+- Monitoring aktivitas kampanye
+- Visualisasi data interaktif
+
+### 🔍 Creator Search
+
+- Pencarian influencer berdasarkan kategori
+- Filtering dan sorting creator
+- Detail profil influencer
+- Engagement overview
+
+### 💾 Saved Creators
+
+- Menyimpan influencer favorit
+- Pengelolaan daftar creator
+- Quick access dari dashboard
+
+### 🚀 Campaign Management
+
+- Membuat kampanye baru
+- Monitoring progress kampanye
+- Status tracking
+- Campaign performance overview
+
+### 💰 Budget Optimization
+
+- Budget planning
+- Smart budget allocation
+- Influencer recommendation
+- ROI-based strategy suggestion
+
+### 🚨 Fake Followers Detection
+
+- Analisis kualitas followers
+- Authenticity score
+- Risk assessment
+- Influencer credibility evaluation
+
+### 💳 Payment Management
+
+- Tracking pembayaran
+- Invoice management
+- Transaction monitoring
+- Payment history
+
+### 🔔 Notification System
+
+- Campaign updates
+- Payment notifications
+- System alerts
+- User activity tracking
+
+### 👤 Profile Management
+
+- User profile settings
+- Account management
+- Preference configuration
+
+---
+
+# 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS 4
+
+### Data Management
+
+- Axios
+- Mock API
+- Local JSON Database
+
+### Visualization
+
+- Recharts
+
+### Development Tools
+
+- ESLint
+- TypeScript
+- Git & GitHub
+
+---
+
+# 📂 Struktur Project
+
+```text
+src/
+│
+├── app/
+│   ├── dashboard/
+│   ├── campaigns/
+│   ├── budget/
+│   ├── payment/
+│   ├── profile/
+│   ├── notifications/
+│   └── search/
+│
+├── features/
+│   ├── dashboard/
+│   ├── campaigns/
+│   ├── budget-optimization/
+│   ├── fake-followers/
+│   ├── payment/
+│   ├── notifications/
+│   ├── profile/
+│   └── search/
+│
+├── shared/
+│   ├── components/
+│   ├── hooks/
+│   ├── services/
+│   ├── types/
+│   └── utils/
+│
+└── assets/
+```
+
+---
+
+# ⚙️ Instalasi
+
+### Clone Repository
+
+```bash
+https://github.com/putrafir/capstone_frontend.git
+cd project-name
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Menjalankan Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Aplikasi akan berjalan di:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+# 📜 Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+### Development
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Production Build
 
-## Deploy on Vercel
+```bash
+npm run build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Start Production
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run start
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+---
+
+# 📈 Progress Pengembangan
+
+| Module | Progress |
+|----------|----------|
+| Dashboard | ✅ 95% |
+| Search Creator | ✅ 90% |
+| Saved Creators | ✅ 90% |
+| Campaign Management | ✅ 85% |
+| Budget Optimization | ✅ 85% |
+| Fake Followers Detection | ✅ 90% |
+| Payment Management | ✅ 80% |
+| Notification System | ✅ 80% |
+| Backend Integration | 🔄 30% |
+
+---
+
+# 🎯 Hasil yang Diharapkan
+
+Platform ini membantu pengguna untuk:
+
+- Menemukan influencer yang relevan
+- Mengurangi risiko fake followers
+- Mengoptimalkan penggunaan budget marketing
+- Meningkatkan efisiensi kampanye
+- Mendukung pengambilan keputusan berbasis data
+
+
+# 👥 Team
+
+### Coding Camp by DBS Foundation × Dicoding
+
+**Capstone Project Team**
+
+- Frontend Developer
+- Backend Developer
+- AI Engineer
+- Data Science
+
+---
+
+# 📄 License
+
+Project ini dibuat untuk kebutuhan pembelajaran dan Capstone Project Coding Camp DBS Foundation × Dicoding.
+🌐 Deployment Aplikasi ini telah di-deploy dan dapat diakses secara publik melalui tautan berikut:
+
+👉 https://lucky-sawine-e000ba.netlify.app/dashboard
+
+Dibuat oleh: [Rifqi Apta Nugroho]
+
+Project: Coding Camp powered by DBS Foundation 2026
+
+---
+
+<div align="center">
+
+### ⭐ Smart Influencer Marketing Platform
+
+Built with ❤️ using Next.js, React, TypeScript, and Tailwind CSS
+
+</div>
