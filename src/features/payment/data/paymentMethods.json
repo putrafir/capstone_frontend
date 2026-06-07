@@ -1,0 +1,34 @@
+{
+  "methods": [
+    {
+      "id": "bank_transfer",
+      "label": "Transfer Bank",
+      "icon": "bank",
+      "brands": ["BNI", "BCA", "BSI", "+7"]
+    },
+    {
+      "id": "credit_card",
+      "label": "Kartu Kredit / Debit",
+      "icon": "card",
+      "brands": ["VISA", "Mastercard", "JCO"]
+    },
+    {
+      "id": "retail",
+      "label": "Outlet Ritel",
+      "icon": "retail",
+      "brands": ["Indomaret", "Alfamart"]
+    },
+    {
+      "id": "e_wallet",
+      "label": "E-Wallet",
+      "icon": "wallet",
+      "brands": ["Dana", "GoPay", "OVO", "ShopeePay"]
+    },
+    {
+      "id": "qris",
+      "label": "Pembayaran QR",
+      "icon": "qr",
+      "brands": []
+    }
+  ]
+}

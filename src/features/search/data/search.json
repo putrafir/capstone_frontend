@@ -1,0 +1,156 @@
+{
+  "creators": [
+    {
+      "id": 1,
+      "name": "Windah Basudara",
+      "handle": "@windahbasudara",
+      "location": "Bekasi",
+      "category": "Gamer",
+      "followers": "4JT",
+      "engagement": "5.1%",
+      "avgViews": "2.5JT",
+      "avatar": "https://i.pravatar.cc/80?img=12",
+      "platformIcons": ["yt", "ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&q=70", "type": "video" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=70", "type": "image" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&q=70", "type": "video" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1593085512500-5d55148d6f0d?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "MiawAug",
+      "handle": "@miawaug",
+      "location": "Jakarta Barat",
+      "category": "Gamer",
+      "followers": "4.2JT",
+      "engagement": "2.15%",
+      "avgViews": "1.2JT",
+      "avatar": "https://i.pravatar.cc/80?img=13",
+      "platformIcons": ["yt", "ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&q=70", "type": "video" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1569003339405-ea396a5a8374?w=400&q=70", "type": "image" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=70", "type": "video" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Raditya Dika",
+      "handle": "@radityad",
+      "location": "Jakarta Selatan",
+      "category": "Entertainer",
+      "followers": "22.3JT",
+      "engagement": "1.2%",
+      "avgViews": "700K",
+      "avatar": "https://i.pravatar.cc/80?img=11",
+      "platformIcons": ["yt", "ig"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=400&q=70", "type": "video" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1530653048-ce3c57e52a96?w=400&q=70", "type": "image" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1553484771-047a44eab759?w=400&q=70", "type": "video" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Arifah Machi",
+      "handle": "@arifahmachi",
+      "location": "Indonesia",
+      "category": "Gaming",
+      "followers": "150K",
+      "engagement": "4.8%",
+      "avgViews": "32K",
+      "avatar": "https://i.pravatar.cc/80?img=44",
+      "platformIcons": ["ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1574158622682-e40e69881006?w=400&q=70", "type": "image" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&q=70", "type": "video" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1548247416-ec66f4900b2e?w=400&q=70", "type": "image" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Ria Ricis",
+      "handle": "@riaricis",
+      "location": "Jakarta",
+      "category": "Lifestyle",
+      "followers": "34.1JT",
+      "engagement": "0.9%",
+      "avgViews": "2.4JT",
+      "avatar": "https://i.pravatar.cc/80?img=16",
+      "platformIcons": ["yt", "ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&q=70", "type": "video" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=400&q=70", "type": "image" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=400&q=70", "type": "video" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Awkarin",
+      "handle": "@awkarin",
+      "location": "Jakarta",
+      "category": "Lifestyle",
+      "followers": "5.8JT",
+      "engagement": "3.2%",
+      "avgViews": "450K",
+      "avatar": "https://i.pravatar.cc/80?img=23",
+      "platformIcons": ["ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1524503033411-c9566986fc8f?w=400&q=70", "type": "image" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=400&q=70", "type": "video" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?w=400&q=70", "type": "image" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Jerome Polin",
+      "handle": "@jeromepolin",
+      "location": "Surabaya",
+      "category": "Edukasi",
+      "followers": "9.1JT",
+      "engagement": "2.8%",
+      "avgViews": "880K",
+      "avatar": "https://i.pravatar.cc/80?img=15",
+      "platformIcons": ["yt", "ig"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=400&q=70", "type": "video" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&q=70", "type": "image" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&q=70", "type": "video" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400&q=70", "type": "image" }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Rachel Vennya",
+      "handle": "@rachelvennya",
+      "location": "Tangerang",
+      "category": "Beauty",
+      "followers": "7.3JT",
+      "engagement": "1.7%",
+      "avgViews": "320K",
+      "avatar": "https://i.pravatar.cc/80?img=47",
+      "platformIcons": ["ig", "tt"],
+      "saved": false,
+      "recentContent": [
+        { "id": 1, "imageUrl": "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?w=400&q=70", "type": "image" },
+        { "id": 2, "imageUrl": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&q=70", "type": "video" },
+        { "id": 3, "imageUrl": "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=70", "type": "image" },
+        { "id": 4, "imageUrl": "https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=400&q=70", "type": "image" }
+      ]
+    }
+  ]
+}
